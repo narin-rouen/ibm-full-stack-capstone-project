@@ -27,7 +27,11 @@ const giftRoutes = require('./routes/giftRoutes'); // Task 1: Import routes
 app.use('/api/gifts', giftRoutes); // Task 2: Use routes
 
 // Search API Task 1: import the searchRoutes and store in a constant called searchRoutes
-//{{insert code here}}
+// Add near other route imports
+const searchRoutes = require('./routes/searchRoutes');
+
+// Add after other route middlewares
+app.use('/api/search', searchRoutes);
 
 
 const pinoHttp = require('pino-http');
